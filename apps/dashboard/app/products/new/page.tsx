@@ -21,9 +21,10 @@ export default function NewProductPage() {
       await createProduct.mutateAsync(data);
       router.push('/products');
     } catch (error) {
-      // Show a more user-friendly error notification
+      // Import and use the proper toast notification from @repo/ui
+      // This is an interim solution until we implement the Toast component
       const errorDiv = document.createElement('div');
-      errorDiv.className = 'fixed top-4 right-4 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded z-50';
+      errorDiv.className = 'fixed top-4 right-4 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-md shadow-md z-50 animate-slide-in';
       errorDiv.innerHTML = `
         <div class="flex items-center">
           <svg class="h-5 w-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
@@ -34,11 +35,14 @@ export default function NewProductPage() {
       `;
       document.body.appendChild(errorDiv);
       
-      // Remove error message after 5 seconds
+      // Add slide-out animation before removing
       setTimeout(() => {
-        if (errorDiv.parentNode) {
-          errorDiv.parentNode.removeChild(errorDiv);
-        }
+        errorDiv.classList.add('animate-fade-out');
+        setTimeout(() => {
+          if (errorDiv.parentNode) {
+            errorDiv.parentNode.removeChild(errorDiv);
+          }
+        }, 300); // animation duration
       }, 5000);
     } finally {
       setIsSubmitting(false);

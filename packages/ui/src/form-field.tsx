@@ -55,7 +55,7 @@ export const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
     const inputClasses = `${baseInputClasses} ${
       hasError
         ? 'border-red-400 text-gray-900 focus:border-red-500 focus:ring-red-500'
-        : 'border-gray-300 focus:border-indigo-500 focus:ring-indigo-500'
+        : 'border-gray-300 focus:border-primary-500 focus:ring-primary-500'
     } ${leftAddon ? 'pl-10' : 'pl-4'} ${rightAddon ? 'pr-10' : 'pr-4'} ${className}`;
 
     return (
@@ -115,7 +115,7 @@ export const SelectField = forwardRef<HTMLSelectElement, SelectFieldProps>(
     const selectClasses = `${baseSelectClasses} ${
       hasError
         ? 'border-red-400 text-gray-900 focus:border-red-500 focus:ring-red-500'
-        : 'border-gray-300 focus:border-indigo-500 focus:ring-indigo-500'
+        : 'border-gray-300 focus:border-primary-500 focus:ring-primary-500'
     } ${className}`;
 
     return (

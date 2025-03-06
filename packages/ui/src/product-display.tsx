@@ -33,7 +33,7 @@ export function ProductDisplay<T extends BaseProduct>({
   // Generate a color for the product image placeholder based on product ID
   const colorClasses = [
     'bg-blue-100', 'bg-green-100', 'bg-yellow-100', 
-    'bg-pink-100', 'bg-purple-100', 'bg-indigo-100',
+    'bg-pink-100', 'bg-purple-100', 'bg-primary-100',
     'bg-red-100', 'bg-orange-100', 'bg-teal-100'
   ];
   const colorClass = colorClasses[(product.id || 0) % colorClasses.length];

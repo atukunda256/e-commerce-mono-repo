@@ -13,7 +13,7 @@ export default function Navbar() {
         <div className="flex justify-between h-16">
           <div className="flex">
             <div className="flex-shrink-0 flex items-center">
-              <Link href="/" className="font-bold text-xl text-indigo-600 flex items-center">
+              <Link href="/" className="font-bold text-xl text-primary-600 flex items-center">
                 <HomeIcon size={20} className="mr-2" />
                 Sellhub
               </Link>
@@ -21,7 +21,7 @@ export default function Navbar() {
             <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
               <Link 
                 href="/" 
-                className="border-indigo-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                className="border-primary-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
               >
                 Home
               </Link>
@@ -30,7 +30,7 @@ export default function Navbar() {
           <div className="hidden sm:ml-6 sm:flex sm:items-center">
             <button 
               onClick={toggleCart}
-              className="p-1.5 rounded-full text-gray-500 hover:text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 relative"
+              className="p-1.5 rounded-full text-gray-500 hover:text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 relative"
               aria-label="View cart"
             >
               <Icons.ShoppingCart size={22} />

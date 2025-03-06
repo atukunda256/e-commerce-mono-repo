@@ -13,7 +13,7 @@ export default function Navbar() {
         <div className="flex justify-between h-16">
           <div className="flex">
             <div className="flex-shrink-0 flex items-center">
-              <Link href="/" className="font-bold text-xl text-indigo-600 flex items-center">
+              <Link href="/" className="font-bold text-xl text-primary-600 flex items-center">
                 <HomeIcon size={20} className="mr-2" />
                 Sellhub
               </Link>
@@ -23,7 +23,7 @@ export default function Navbar() {
                 href="/products" 
                 className={`${
                   pathname?.startsWith('/products') 
-                  ? 'border-indigo-500 text-gray-900' 
+                  ? 'border-primary-500 text-gray-900' 
                   : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'
                 } inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium`}
               >
@@ -34,7 +34,7 @@ export default function Navbar() {
                 href="/orders" 
                 className={`${
                   pathname?.startsWith('/orders') 
-                  ? 'border-indigo-500 text-gray-900' 
+                  ? 'border-primary-500 text-gray-900' 
                   : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'
                 } inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium`}
               >

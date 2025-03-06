@@ -41,7 +41,7 @@ export default function Home() {
     <main className="flex flex-col items-center justify-center py-20 px-4 sm:px-6 lg:px-8">
       <div className="w-full max-w-md">
         <div className="text-center mb-10">
-          <h1 className="text-5xl font-extrabold text-indigo-600 tracking-tight mb-1">Sellhub</h1>
+          <h1 className="text-5xl font-extrabold text-primary-600 tracking-tight mb-1">Sellhub</h1>
           <h2 className="text-2xl font-bold text-gray-800">Seller Dashboard</h2>
           <p className="mt-3 text-base text-gray-600 max-w-xs mx-auto">
             Welcome back! Log in to manage your products, track orders, and grow your business.
@@ -76,7 +76,7 @@ export default function Home() {
                 <input
                   id="rememberMe"
                   type="checkbox"
-                  className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"
+                  className="h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded"
                   {...register('rememberMe')}
                 />
                 <label htmlFor="rememberMe" className="ml-2 block text-sm text-gray-700">

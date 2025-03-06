@@ -187,7 +187,7 @@ export function FormSubmitButton({
     <button
       type="submit"
       disabled={isSubmitting}
-      className={`flex items-center justify-center py-2 px-4 rounded-md font-medium transition-colors bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 text-white disabled:bg-indigo-400 disabled:cursor-not-allowed ${className}`}
+      className={`flex items-center justify-center py-2 px-4 rounded-md font-medium transition-colors bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 text-white disabled:bg-primary-400 disabled:cursor-not-allowed ${className}`}
     >
       {isSubmitting ? (
         <>

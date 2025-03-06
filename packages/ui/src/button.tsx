@@ -42,9 +42,9 @@ export const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonPr
     const baseStyles = 'inline-flex items-center justify-center rounded-md font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2';
     
     const variantStyles = {
-      primary: 'bg-indigo-600 hover:bg-indigo-700 text-white focus:ring-indigo-500 border border-transparent disabled:bg-indigo-400',
-      secondary: 'bg-white hover:bg-gray-50 text-gray-700 focus:ring-indigo-500 border border-gray-300 disabled:bg-gray-100',
-      outline: 'bg-transparent hover:bg-gray-50 text-indigo-600 focus:ring-indigo-500 border border-indigo-600 disabled:text-gray-400 disabled:border-gray-300',
+      primary: 'bg-primary-600 hover:bg-primary-700 text-white focus:ring-primary-500 border border-transparent disabled:bg-primary-400',
+      secondary: 'bg-white hover:bg-gray-50 text-gray-700 focus:ring-primary-500 border border-gray-300 disabled:bg-gray-100',
+      outline: 'bg-transparent hover:bg-gray-50 text-primary-600 focus:ring-primary-500 border border-primary-600 disabled:text-gray-400 disabled:border-gray-300',
       danger: 'bg-red-600 hover:bg-red-700 text-white focus:ring-red-500 border border-transparent disabled:bg-red-400',
       success: 'bg-green-600 hover:bg-green-700 text-white focus:ring-green-500 border border-transparent disabled:bg-green-400',
     };

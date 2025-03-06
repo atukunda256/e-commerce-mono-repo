@@ -6,7 +6,7 @@ export default function HeroBanner() {
   return (
     <div className="relative bg-gray-900">
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-indigo-900 to-gray-900 opacity-90"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-900 to-gray-900 opacity-90"></div>
       </div>
       <Container className="relative py-24 sm:py-32">
         <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">

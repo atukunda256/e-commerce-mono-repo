@@ -133,7 +133,7 @@ export default function ProductForm({
                 type="text"
                 id="customCategory"
                 placeholder="Enter custom category"
-                className="block w-full py-3 px-4 border border-gray-300 rounded-l-md shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm"
+                className="block w-full py-3 px-4 border border-gray-300 rounded-l-md shadow-sm focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500 sm:text-sm"
                 {...register('category')}
               />
               <button

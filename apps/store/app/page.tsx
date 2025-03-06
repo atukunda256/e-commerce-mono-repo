@@ -54,7 +54,7 @@ export default function Home() {
               onClick={() => setCategoryFilter(null)}
               className={`px-3 py-1 rounded-full text-sm ${
                 categoryFilter === null
-                  ? "bg-indigo-100 text-indigo-800 font-medium"
+                  ? "bg-primary-100 text-primary-800 font-medium"
                   : "bg-gray-100 text-gray-800 hover:bg-gray-200"
               }`}
             >
@@ -66,7 +66,7 @@ export default function Home() {
                 onClick={() => setCategoryFilter(category)}
                 className={`px-3 py-1 rounded-full text-sm ${
                   categoryFilter === category
-                    ? "bg-indigo-100 text-indigo-800 font-medium"
+                    ? "bg-primary-100 text-primary-800 font-medium"
                     : "bg-gray-100 text-gray-800 hover:bg-gray-200"
                 }`}
               >
@@ -89,7 +89,7 @@ export default function Home() {
                   onClick={() => setCategoryFilter(null)}
                   className={`px-3 py-1 rounded-full text-sm ${
                     categoryFilter === null
-                      ? "bg-indigo-100 text-indigo-800"
+                      ? "bg-primary-100 text-primary-800"
                       : "bg-gray-100 text-gray-800 hover:bg-gray-200"
                   }`}
                 >
@@ -101,7 +101,7 @@ export default function Home() {
                     onClick={() => setCategoryFilter(category)}
                     className={`px-3 py-1 rounded-full text-sm ${
                       categoryFilter === category
-                        ? "bg-indigo-100 text-indigo-800"
+                        ? "bg-primary-100 text-primary-800"
                         : "bg-gray-100 text-gray-800 hover:bg-gray-200"
                     }`}
                   >
@@ -114,7 +114,7 @@ export default function Home() {
             {isLoading ? (
               <div className="py-32 flex flex-col items-center justify-center">
                 <svg
-                  className="animate-spin h-12 w-12 text-indigo-600 mb-4"
+                  className="animate-spin h-12 w-12 text-primary-600 mb-4"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -170,7 +170,7 @@ export default function Home() {
                 {categoryFilter && (
                   <button
                     onClick={() => setCategoryFilter(null)}
-                    className="mt-4 inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700"
+                    className="mt-4 inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary-600 hover:bg-primary-700"
                   >
                     View all products
                   </button>
