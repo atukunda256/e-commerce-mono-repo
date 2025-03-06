@@ -7,11 +7,9 @@ import { eq, desc, isNull } from 'drizzle-orm';
 // Create a new tRPC instance
 const t = initTRPC.create();
 
-// Create a router
 export const router = t.router;
 export const publicProcedure = t.procedure;
 
-// Product router
 export const productRouter = router({
   // Create a new product
   create: publicProcedure
@@ -161,17 +159,15 @@ export const orderRouter = router({
     
   // Get all orders with order items
   getAll: publicProcedure.query(async () => {
-    // First fetch all orders
     const allOrders = await db
       .select()
       .from(orders)
       .where(isNull(orders.deletedAt))
       .orderBy(desc(orders.createdAt));
     
-    // For each order, fetch its items
     const ordersWithItems = await Promise.all(
       allOrders.map(async (order) => {
-        // Get order items
+
         const items = await db
           .select({
             id: orderProducts.id,
@@ -276,11 +272,9 @@ export const orderRouter = router({
     }),
 });
 
-// Combine routers
 export const appRouter = router({
   product: productRouter,
   order: orderRouter,
 });
 
-// Export type definition of API
 export type AppRouter = typeof appRouter;

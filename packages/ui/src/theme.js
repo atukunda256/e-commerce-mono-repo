@@ -1,4 +1,4 @@
-// Shared theme configuration for the Sellhub application
+// Shared theme configuration
 module.exports = {
   colors: {
     primary: {

@@ -39,7 +39,7 @@ export function ProductDisplay<T extends BaseProduct>({
   const colorClass = colorClasses[(product.id || 0) % colorClasses.length];
   
   return (
-    <div className={`bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200 flex flex-col h-full ${className}`}>
+    <div className={`bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200 flex flex-col h-full ${className}`}>
       {/* Product image/placeholder */}
       {displayImage && (
         <div className="relative">
@@ -73,7 +73,7 @@ export function ProductDisplay<T extends BaseProduct>({
         )}
         
         {/* Product name */}
-        <h3 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-2 min-h-[3.5rem]">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 line-clamp-2 min-h-[3.5rem]">
           {product.name}
         </h3>
         
@@ -81,10 +81,10 @@ export function ProductDisplay<T extends BaseProduct>({
         <div className="mt-auto">
           <div className="flex justify-between items-end mb-3">
             <div className="flex items-baseline">
-              <span className="text-xl font-bold text-gray-900">${product.price.toFixed(2)}</span>
+              <span className="text-xl font-bold text-gray-900 dark:text-white">${product.price.toFixed(2)}</span>
             </div>
             {showStock && product.quantity > 0 && (
-              <span className="text-sm text-gray-500">
+              <span className="text-sm text-gray-500 dark:text-gray-400">
                 {product.quantity} available
               </span>
             )}

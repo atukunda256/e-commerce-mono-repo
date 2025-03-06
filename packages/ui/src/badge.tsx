@@ -23,12 +23,12 @@ export const Badge = ({
   const baseClasses = 'inline-flex items-center font-medium leading-none';
   
   const variantClasses = {
-    primary: 'bg-primary-100 text-primary-800',
-    secondary: 'bg-gray-100 text-gray-800',
-    success: 'bg-green-100 text-green-800',
-    warning: 'bg-yellow-100 text-yellow-800',
-    danger: 'bg-red-100 text-red-800',
-    info: 'bg-blue-100 text-blue-800',
+    primary: 'bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200',
+    secondary: 'bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200',
+    success: 'bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200',
+    warning: 'bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200',
+    danger: 'bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200',
+    info: 'bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200',
   };
   
   const sizeClasses = {
@@ -50,7 +50,7 @@ export const Badge = ({
 
 export const StockBadge = ({ quantity }: { quantity: number }) => {
   if (quantity <= 0) {
-    return <Badge variant="danger" rounded="full" size="md" className="border border-red-300">Out of Stock</Badge>;
+    return <Badge variant="danger" rounded="full" size="md" className="border border-red-300 dark:border-red-800">Out of Stock</Badge>;
   }
   
   if (quantity < 5) {
@@ -59,7 +59,7 @@ export const StockBadge = ({ quantity }: { quantity: number }) => {
         variant="warning" 
         rounded="full" 
         size="md" 
-        className="border border-yellow-300 bg-yellow-100 text-yellow-800 font-medium"
+        className="border border-yellow-300 dark:border-yellow-800 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 font-medium"
       >
         Low Stock
       </Badge>

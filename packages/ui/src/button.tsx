@@ -43,8 +43,8 @@ export const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonPr
     
     const variantStyles = {
       primary: 'bg-primary-600 hover:bg-primary-700 text-white focus:ring-primary-500 border border-transparent disabled:bg-primary-400',
-      secondary: 'bg-white hover:bg-gray-50 text-gray-700 focus:ring-primary-500 border border-gray-300 disabled:bg-gray-100',
-      outline: 'bg-transparent hover:bg-gray-50 text-primary-600 focus:ring-primary-500 border border-primary-600 disabled:text-gray-400 disabled:border-gray-300',
+      secondary: 'bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-200 focus:ring-primary-500 border border-gray-300 dark:border-gray-600 disabled:bg-gray-100 dark:disabled:bg-gray-800',
+      outline: 'bg-transparent hover:bg-gray-50 dark:hover:bg-gray-800 text-primary-600 dark:text-primary-400 focus:ring-primary-500 border border-primary-600 dark:border-primary-500 disabled:text-gray-400 disabled:border-gray-300 dark:disabled:text-gray-500 dark:disabled:border-gray-700',
       danger: 'bg-red-600 hover:bg-red-700 text-white focus:ring-red-500 border border-transparent disabled:bg-red-400',
       success: 'bg-green-600 hover:bg-green-700 text-white focus:ring-green-500 border border-transparent disabled:bg-green-400',
     };

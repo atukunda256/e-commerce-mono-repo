@@ -2,6 +2,7 @@
 const sharedTheme = require('../../packages/ui/src/theme');
 
 export default {
+  darkMode: 'class',
   content: [
     "./app/**/*.{js,ts,jsx,tsx}",
     "./pages/**/*.{js,ts,jsx,tsx}",

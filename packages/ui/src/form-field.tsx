@@ -15,12 +15,12 @@ export const FormField = forwardRef<HTMLDivElement, FormFieldProps>(
   ({ id, label, error, required = false, children, helpText }, ref) => {
     return (
       <div ref={ref}>
-        <label htmlFor={id} className="block text-sm font-medium text-gray-700">
-          {label} {required && <span className="text-red-500">*</span>}
+        <label htmlFor={id} className="block text-sm font-medium text-gray-700 dark:text-gray-200">
+          {label} {required && <span className="text-red-500 dark:text-red-400">*</span>}
         </label>
         <div className="mt-1">{children}</div>
-        {helpText && <p className="mt-1 text-sm text-gray-500">{helpText}</p>}
-        {error && <p className="mt-2 text-sm text-red-600 font-medium">{error}</p>}
+        {helpText && <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">{helpText}</p>}
+        {error && <p className="mt-2 text-sm text-red-600 dark:text-red-400 font-medium">{error}</p>}
       </div>
     );
   }
@@ -54,8 +54,8 @@ export const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
     const baseInputClasses = 'block w-full py-3 border rounded-md shadow-sm focus:outline-none focus:ring-1 sm:text-sm';
     const inputClasses = `${baseInputClasses} ${
       hasError
-        ? 'border-red-400 text-gray-900 focus:border-red-500 focus:ring-red-500'
-        : 'border-gray-300 focus:border-primary-500 focus:ring-primary-500'
+        ? 'border-red-400 text-gray-900 dark:text-white focus:border-red-500 focus:ring-red-500 dark:border-red-500 dark:bg-gray-800'
+        : 'border-gray-300 focus:border-primary-500 focus:ring-primary-500 text-gray-900 dark:text-white dark:border-gray-600 dark:bg-gray-800'
     } ${leftAddon ? 'pl-10' : 'pl-4'} ${rightAddon ? 'pr-10' : 'pr-4'} ${className}`;
 
     return (
@@ -114,8 +114,8 @@ export const SelectField = forwardRef<HTMLSelectElement, SelectFieldProps>(
     const baseSelectClasses = 'block w-full py-3 px-4 border rounded-md shadow-sm focus:outline-none focus:ring-1 sm:text-sm';
     const selectClasses = `${baseSelectClasses} ${
       hasError
-        ? 'border-red-400 text-gray-900 focus:border-red-500 focus:ring-red-500'
-        : 'border-gray-300 focus:border-primary-500 focus:ring-primary-500'
+        ? 'border-red-400 text-gray-900 dark:text-white focus:border-red-500 focus:ring-red-500 dark:border-red-500 dark:bg-gray-800'
+        : 'border-gray-300 focus:border-primary-500 focus:ring-primary-500 text-gray-900 dark:text-white dark:border-gray-600 dark:bg-gray-800'
     } ${className}`;
 
     return (

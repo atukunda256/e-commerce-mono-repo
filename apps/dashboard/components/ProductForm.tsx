@@ -83,12 +83,12 @@ export default function ProductForm({
   };
 
   return (
-    <div className="bg-white shadow-md rounded-lg px-8 pt-6 pb-8 mb-4 max-w-xl mx-auto">
+    <div className="bg-white dark:bg-gray-800 shadow-md rounded-lg px-8 pt-6 pb-8 mb-4 max-w-xl mx-auto">
       <div className="mb-6">
-        <h2 className="text-2xl font-bold text-gray-800 mb-4">
+        <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">
           {initialData ? 'Update Product' : 'Create New Product'}
         </h2>
-        <p className="text-sm text-gray-500">
+        <p className="text-sm text-gray-500 dark:text-gray-400">
           {initialData 
             ? 'Edit the product details below and save your changes.' 
             : 'Fill in the details below to add a new product to your inventory.'}
@@ -133,13 +133,13 @@ export default function ProductForm({
                 type="text"
                 id="customCategory"
                 placeholder="Enter custom category"
-                className="block w-full py-3 px-4 border border-gray-300 rounded-l-md shadow-sm focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500 sm:text-sm"
+                className="block w-full py-3 px-4 border border-gray-300 dark:border-gray-600 rounded-l-md shadow-sm focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500 sm:text-sm text-gray-900 dark:text-white dark:bg-gray-800"
                 {...register('category')}
               />
               <button
                 type="button"
                 onClick={() => setValue('category', '')}
-                className="inline-flex items-center px-3 py-2 border border-l-0 border-gray-300 bg-gray-50 text-gray-500 rounded-r-md hover:bg-gray-100"
+                className="inline-flex items-center px-3 py-2 border border-l-0 border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-500 dark:text-gray-300 rounded-r-md hover:bg-gray-100 dark:hover:bg-gray-600"
               >
                 <svg className="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
@@ -169,7 +169,7 @@ export default function ProductForm({
           />
         </div>
 
-        <div className="mt-10 pt-6 border-t border-gray-200 flex items-center justify-between">
+        <div className="mt-10 pt-6 border-t border-gray-200 dark:border-gray-700 flex items-center justify-between">
           <Button
             type="button"
             variant="secondary"

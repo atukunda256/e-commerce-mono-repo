@@ -35,6 +35,7 @@ This project uses a monorepo structure with the following applications:
 - **PostgreSQL**: For database
 - **DrizzleORM**: For database operations
 - **Docker Compose**: For running PostgreSQL
+- **Tailwind CSS**: For styling
 
 ## Getting Started
 

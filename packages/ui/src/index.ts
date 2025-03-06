@@ -6,6 +6,8 @@ export * from './code';
 export * from './container';
 export * from './toast';
 export * from './product-display';
+export * from './theme-context';
+export * from './theme-toggle';
 
 export * from './icons';
 

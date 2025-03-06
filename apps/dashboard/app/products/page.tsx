@@ -25,7 +25,7 @@ export default function ProductsPage() {
         actionIcon={<PlusIcon />}
       />
 
-      <div className="bg-white shadow overflow-hidden sm:rounded-lg">
+      <div className="bg-white dark:bg-gray-800 shadow overflow-hidden sm:rounded-lg">
         <div className="px-4 py-5 sm:p-6">
           <ProductsTable 
             products={products || []} 

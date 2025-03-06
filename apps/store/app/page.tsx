@@ -47,15 +47,15 @@ export default function Home() {
         <div className="grid grid-cols-1 gap-8">
           {/* Category filters */}
           <div className="flex flex-wrap gap-2 justify-center mb-6">
-            <span className="text-sm text-gray-700 my-auto mr-2">
+            <span className="text-sm text-gray-700 dark:text-gray-300 my-auto mr-2">
               Filter by category:
             </span>
             <button
               onClick={() => setCategoryFilter(null)}
               className={`px-3 py-1 rounded-full text-sm ${
                 categoryFilter === null
-                  ? "bg-primary-100 text-primary-800 font-medium"
-                  : "bg-gray-100 text-gray-800 hover:bg-gray-200"
+                  ? "bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 font-medium"
+                  : "bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-600"
               }`}
             >
               All Products
@@ -66,8 +66,8 @@ export default function Home() {
                 onClick={() => setCategoryFilter(category)}
                 className={`px-3 py-1 rounded-full text-sm ${
                   categoryFilter === category
-                    ? "bg-primary-100 text-primary-800 font-medium"
-                    : "bg-gray-100 text-gray-800 hover:bg-gray-200"
+                    ? "bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 font-medium"
+                    : "bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-600"
                 }`}
               >
                 {category}
@@ -78,19 +78,19 @@ export default function Home() {
           {/* Main Product Area */}
           <div>
             <div className="flex flex-wrap items-baseline justify-between mb-6 border-b border-gray-200 pb-6">
-              <h1 className="text-3xl font-bold tracking-tight text-gray-900">
+              <h1 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
                 {categoryFilter ? `${categoryFilter} Products` : "All Products"}
               </h1>
 
               {/* Desktop category filters */}
               <div className="hidden lg:flex flex-wrap gap-2 items-center">
-                <span className="text-sm text-gray-700 mr-2">Filter:</span>
+                <span className="text-sm text-gray-700 dark:text-gray-300 mr-2">Filter:</span>
                 <button
                   onClick={() => setCategoryFilter(null)}
                   className={`px-3 py-1 rounded-full text-sm ${
                     categoryFilter === null
-                      ? "bg-primary-100 text-primary-800"
-                      : "bg-gray-100 text-gray-800 hover:bg-gray-200"
+                      ? "bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200"
+                      : "bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-600"
                   }`}
                 >
                   All
@@ -101,8 +101,8 @@ export default function Home() {
                     onClick={() => setCategoryFilter(category)}
                     className={`px-3 py-1 rounded-full text-sm ${
                       categoryFilter === category
-                        ? "bg-primary-100 text-primary-800"
-                        : "bg-gray-100 text-gray-800 hover:bg-gray-200"
+                        ? "bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200"
+                        : "bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-600"
                     }`}
                   >
                     {category}
@@ -133,7 +133,7 @@ export default function Home() {
                     d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                   ></path>
                 </svg>
-                <p className="text-lg text-gray-600">Loading products...</p>
+                <p className="text-lg text-gray-600 dark:text-gray-400">Loading products...</p>
               </div>
             ) : filteredProducts && filteredProducts.length > 0 ? (
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -159,10 +159,10 @@ export default function Home() {
                     d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"
                   />
                 </svg>
-                <h3 className="mt-4 text-xl font-medium text-gray-900">
+                <h3 className="mt-4 text-xl font-medium text-gray-900 dark:text-white">
                   No products found
                 </h3>
-                <p className="mt-2 text-lg text-gray-600">
+                <p className="mt-2 text-lg text-gray-600 dark:text-gray-400">
                   {categoryFilter
                     ? `There are no ${categoryFilter} products available at the moment.`
                     : "No products are available at the moment."}

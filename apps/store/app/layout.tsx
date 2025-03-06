@@ -38,7 +38,7 @@ function StoreLayout({ children }: { children: React.ReactNode }) {
           
           <div className="absolute inset-y-0 right-0 pl-10 max-w-md w-full flex">
             <div className="w-screen max-w-xl">
-              <div className="h-full flex flex-col bg-white shadow-xl">
+              <div className="h-full flex flex-col bg-white dark:bg-gray-800 shadow-xl">
                 <CartSidebar />
               </div>
             </div>
@@ -62,7 +62,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full">
-      <body className={`${geistSans.variable} ${geistMono.variable} h-full`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} h-full bg-white dark:bg-gray-900`}>
         <Providers>
           <StoreLayout>{children}</StoreLayout>
         </Providers>

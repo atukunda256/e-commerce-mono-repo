@@ -10,7 +10,6 @@ import {
   uuid,
 } from 'drizzle-orm/pg-core';
 
-// Product schema: id, Name, Category, quantity, price, create_at, updated_at, deleted_at
 export const products = pgTable('products', {
   id: serial('id').primaryKey(),
   name: varchar('name', { length: 255 }).notNull(),
@@ -22,7 +21,6 @@ export const products = pgTable('products', {
   deletedAt: timestamp('deleted_at'),
 });
 
-// Type for product selection
 export type ProductSelect = {
   id: number;
   name: string;
@@ -34,7 +32,6 @@ export type ProductSelect = {
   deletedAt: Date | null;
 };
 
-// Order schema: id, list of Products, created_at, updated_at, deleted_at
 export const orders = pgTable('orders', {
   id: serial('id').primaryKey(),
   createdAt: timestamp('created_at').defaultNow().notNull(),
