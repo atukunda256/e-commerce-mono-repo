@@ -134,11 +134,11 @@ export default function ProductsTable({
                     <div className="text-sm text-gray-900">{product.quantity} units</div>
                     <div className="text-sm text-gray-500">
                       {product.quantity === 0 ? (
-                        <Badge variant="danger" size="sm" className='p-2'>Out of stock</Badge>
+                        <Badge variant="danger" size="sm" className="px-2 py-1 border border-red-300">Out of stock</Badge>
                       ) : product.quantity < 10 ? (
-                        <Badge variant="warning" size="sm" className='p-2'>Low stock</Badge>
+                        <Badge variant="warning" size="sm" className="px-2 py-1 border border-yellow-300 bg-yellow-100 text-yellow-800 font-medium">Low stock</Badge>
                       ) : (
-                        <Badge variant="success" size="sm" className='p-2'>In stock</Badge>
+                        <Badge variant="success" size="sm" className="px-2 py-1 border border-green-300">In stock</Badge>
                       )}
                     </div>
                   </td>

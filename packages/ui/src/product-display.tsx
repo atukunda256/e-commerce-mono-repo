@@ -45,7 +45,7 @@ export function ProductDisplay<T extends BaseProduct>({
         <div className="relative">
           {/* Stock indicator */}
           {showStock && (
-            <div className="absolute top-2 right-2 z-10">
+            <div className="absolute top-2 right-2 z-10 shadow-sm">
               <StockBadge quantity={product.quantity} />
             </div>
           )}
