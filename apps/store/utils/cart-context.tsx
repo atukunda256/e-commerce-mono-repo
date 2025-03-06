@@ -3,13 +3,11 @@
 import { createContext, useState, useContext, ReactNode, useEffect } from 'react';
 import { ProductSelect } from 'service';
 
-// Define the structure of a cart item
 export interface CartItem {
   product: ProductSelect;
   quantity: number;
 }
 
-// Define the context type
 interface CartContextType {
   items: CartItem[];
   addItem: (product: ProductSelect) => void;
@@ -25,7 +23,6 @@ interface CartContextType {
   lastAddedItem: ProductSelect | null;
 }
 
-// Create the context with a default value
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
 // Provider component
@@ -35,18 +32,15 @@ export function CartProvider({ children }: { children: ReactNode }) {
   const [lastAddedItem, setLastAddedItem] = useState<ProductSelect | null>(null);
   const [autoCloseTimer, setAutoCloseTimer] = useState<NodeJS.Timeout | null>(null);
 
-  // Open cart sidebar
   const openCart = () => {
     setIsCartOpen(true);
   };
 
-  // Close cart sidebar
   const closeCart = () => {
     setIsCartOpen(false);
     setLastAddedItem(null);
   };
 
-  // Toggle cart sidebar
   const toggleCart = () => {
     setIsCartOpen(prev => !prev);
     if (!isCartOpen) {
@@ -71,20 +65,9 @@ export function CartProvider({ children }: { children: ReactNode }) {
       }
     });
 
-    // Set as last added item to highlight in cart
     setLastAddedItem(product);
-    
     // Automatically open the cart when an item is added
     openCart();
-    
-    // Clear any existing auto-close timer
-    if (autoCloseTimer) {
-      clearTimeout(autoCloseTimer);
-    }
-    
-    // No longer auto-close the cart
-    // We'll keep it open until user manually closes it
-    setAutoCloseTimer(null);
   };
 
   // Clean up timer on unmount
@@ -96,12 +79,10 @@ export function CartProvider({ children }: { children: ReactNode }) {
     };
   }, [autoCloseTimer]);
 
-  // Remove an item from the cart
   const removeItem = (productId: number) => {
     setItems((prevItems) => prevItems.filter((item) => item.product.id !== productId));
   };
 
-  // Update the quantity of an item
   const updateQuantity = (productId: number, quantity: number) => {
     if (quantity <= 0) {
       removeItem(productId);
@@ -115,15 +96,12 @@ export function CartProvider({ children }: { children: ReactNode }) {
     );
   };
 
-  // Clear the cart
   const clearCart = () => {
     setItems([]);
   };
 
-  // Calculate total number of items
   const totalItems = items.reduce((total, item) => total + item.quantity, 0);
 
-  // Calculate total price
   const totalPrice = items.reduce(
     (total, item) => total + item.product.price * item.quantity,
     0
