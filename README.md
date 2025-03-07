@@ -48,7 +48,7 @@ This project uses a monorepo structure with the following applications:
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone git@github.com:atukunda256/e-commerce-mono-repo.git
    cd sellhub
    ```
 
@@ -62,13 +62,8 @@ This project uses a monorepo structure with the following applications:
    docker-compose up -d
    ```
 
-4. Run database migrations:
-   ```bash
-   cd apps/service
-   pnpm exec drizzle-kit push:pg
-   ```
 
-5. Start the development servers:
+4. Start the development servers:
    ```bash
    pnpm dev
    ```
@@ -94,4 +89,4 @@ The applications will be available at:
 
 ## Video Demo
 
-[Link to video demonstration]
+[Link to video demonstration](https://www.loom.com/share/636473fef848443d993b1a7809c8d27e?sid=0e78db79-93cc-4005-840a-757b07315367)
